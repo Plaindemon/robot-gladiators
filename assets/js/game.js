@@ -4,21 +4,37 @@
 //    * Defeat each enemy-robot
 // "LOSE" - Player robot's health is zero or less
 
+
 // var playerName = 'Clank McKrank';
 var playerName = window.prompt("What is your robot's name?");
 var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
 
-// You can also log multiple values at once like this
-console.log(playerName, playerAttack, playerHealth);
-
 var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
+
+// You can also log multiple values at once like this
+console.log(playerName, playerAttack, playerHealth);
+
+
+
+console.log(enemyNames[0]);
+console.log(enemyNames[1]);
+console.log(enemyNames[2]);
+
+console.log(enemyNames.length);
+// for loop array
+for(var i = 0; i < enemyNames.length; i++) {
+  console.log(enemyNames[i]);
+  console.log(i);
+  console.log(enemyNames[i] + " is at " + i + " index");
+}
+
 // fight function
-var fight = function() {
+var fight = function(enemyName) {
   // Alert players that they are starting the round
   window.alert("Welcome to Robot Gladiators!");
 
@@ -73,21 +89,7 @@ var fight = function() {
   }
 };
 
-// replaced run function to start game
+// run fight function to start game
 for(var i = 0; i < enemyNames.length; i++) {
   fight(enemyNames[i]);
-}
-
-console.log(enemyNames);
-
-console.log(enemyNames[0]);
-console.log(enemyNames[1]);
-console.log(enemyNames[2]);
-console.log(enemyNames[3]);
-
-console.log(enemyNames.length);
-for(var i = 0; i < enemyNames.length; i++) {
-  console.log(enemyNames[i]);
-  console.log(i);
-  console.log(enemyNames[i] + " is at " + i + " index");
 }
